@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://D:\Eglseder\_Privat\Mobile Anwendungsentwicklung\AndroidStudioProjects\ToDo-Liste_ME\ToDo-Liste.iml" filepath="D:\Eglseder\_Privat\Mobile Anwendungsentwicklung\AndroidStudioProjects\ToDo-Liste_ME\ToDo-Liste.iml" />
       <module fileurl="file://$PROJECT_DIR$/ToDo-Liste_ME.iml" filepath="$PROJECT_DIR$/ToDo-Liste_ME.iml" />
+      <module fileurl="file://C:\Users\mkoenig\AndroidStudioProjects\ToDo-Liste_ME\ToDo-Liste_ME.iml" filepath="C:\Users\mkoenig\AndroidStudioProjects\ToDo-Liste_ME\ToDo-Liste_ME.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\mkoenig\AndroidStudioProjects\ToDo-Liste_ME\app\app.iml" filepath="C:\Users\mkoenig\AndroidStudioProjects\ToDo-Liste_ME\app\app.iml" />
       <module fileurl="file://D:\Eglseder\_Privat\Mobile Anwendungsentwicklung\AndroidStudioProjects\ToDo-Liste_ME\app\app.iml" filepath="D:\Eglseder\_Privat\Mobile Anwendungsentwicklung\AndroidStudioProjects\ToDo-Liste_ME\app\app.iml" />
     </modules>
   </component>
