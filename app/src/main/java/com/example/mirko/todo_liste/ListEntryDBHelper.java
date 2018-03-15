@@ -98,7 +98,10 @@ public class ListEntryDBHelper extends SQLiteOpenHelper {
 
     public boolean removeListEntry(ListEntry entry) {
         if (entry != null) {
-            return this.database.delete(TABLE_TODO, COLUMN_ID + " = '" + entry.getId() + "' ", null) > 0;
+
+            String[] args = new String[]{entry.getId()};
+
+            return this.database.delete(TABLE_TODO, COLUMN_ID + " = ? ",args) > 0 ;
         }
 
         return false;
