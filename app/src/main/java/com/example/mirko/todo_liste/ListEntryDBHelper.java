@@ -96,5 +96,14 @@ public class ListEntryDBHelper extends SQLiteOpenHelper {
         return listEntry;
     }
 
+    public boolean removeListEntry(ListEntry entry) {
+        if (entry != null) {
+            return this.database.delete(TABLE_TODO, COLUMN_ID + " = '" + entry.getId() + "' ", null) > 0;
+        }
+
+        return false;
+
+    }
+
 
 }
