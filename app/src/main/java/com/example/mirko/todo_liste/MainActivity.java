@@ -28,13 +28,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.lvMain = (ListView)findViewById(R.id.lvMain);
+        this.lvMain = (ListView) findViewById(R.id.lvMain);
         this.btnAdd = findViewById(R.id.btnAdd);
         this.btnDelete = findViewById(R.id.btnDelete);
         this.etInput = findViewById(R.id.etInput);
 
         this.lvMainData = new ArrayList<>();
-        this.adapter = new ArrayAdapter<ListEntry>(this,R.layout.list_item,this.lvMainData);
+        this.adapter = new ArrayAdapter<ListEntry>(this, R.layout.list_item, this.lvMainData);
         this.lvMain.setAdapter(this.adapter);
         this.lvMain.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
@@ -47,12 +47,12 @@ public class MainActivity extends Activity {
 
     }
 
-    private void fillVisualComponents(){
+    private void fillVisualComponents() {
         this.adapter.addAll(this.listEntryDBHelper.getAllEntries());
         this.adapter.notifyDataSetChanged();
     }
 
-    private void initEvents(){
+    private void initEvents() {
         this.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,8 +75,15 @@ public class MainActivity extends Activity {
 
                 Log.d("MEINS", Integer.toString(checkedItemPositions.size()));
 
-                for(int i = lvMainData.size()-1; i>=0; i++) {
+                for (int i = lvMainData.size() - 1; i >= 0; i--) {
+                    if (checkedItemPositions.get(i)) {
+                        ListEntry listEntry = lvMainData.get(i);
+//                        if(listEntryDBHelper.re)
 
+                        lvMain.setItemChecked(i, false);
+                        lvMainData.remove(i);
+                        adapter.notifyDataSetChanged();
+                    }
                 }
             }
         });
